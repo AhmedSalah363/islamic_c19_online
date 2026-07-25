@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:islamic_c19_online/core/theme/app_colors.dart';
-
 import '../widgets/sura_widget.dart';
 
 class QuranScreen extends StatelessWidget {

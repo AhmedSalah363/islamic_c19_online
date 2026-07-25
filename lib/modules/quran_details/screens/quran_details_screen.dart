@@ -98,28 +98,35 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
                       int index = suraList.indexOf(e);
                       return TextSpan(
                         text: "$e(${index + 1})  ",
-                        recognizer: TapGestureRecognizer()..onTap = (){
-                          showModalBottomSheet(context: context, builder: (context) {
-                            return Container(
-                              color: AppColors.backgroundColor,
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.center,
-                                children: [
-                                  Center(
-                                    child: Text(e, style: TextStyle(
-                                      fontSize: 26,
-                                      color: AppColors.gold,
-                                      fontFamily: GoogleFonts.amiriQuran().fontFamily,
-                                      height: 2,
-                                    ),
-                                    textAlign: TextAlign.center,
-                                    ),
-                                  )
-                                ],
-                              ),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) {
+                                return Container(
+                                  color: AppColors.backgroundColor,
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Center(
+                                        child: Text(
+                                          e,
+                                          style: TextStyle(
+                                            fontSize: 26,
+                                            color: AppColors.gold,
+                                            fontFamily: GoogleFonts.amiriQuran()
+                                                .fontFamily,
+                                            height: 2,
+                                          ),
+                                          textAlign: TextAlign.center,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                );
+                              },
                             );
-                          },);
-                        },
+                          },
                         style: TextStyle(
                           color: e.contains("اللَّهِ") ? Colors.orange : null,
                         ),
@@ -140,7 +147,7 @@ class _QuranDetailsScreenState extends State<QuranDetailsScreen> {
     String sura = await rootBundle.loadString("assets/suras/$suraNumber.txt");
     sura = sura.trim();
     suraList = sura.split("\n");
-    print(suraList[0]);
+    //print(suraList[0]);
     setState(() {});
   }
 }

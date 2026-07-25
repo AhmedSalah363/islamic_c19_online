@@ -37,6 +37,7 @@ dependencies:
   animate_do: ^5.1.0
   google_fonts: ^8.1.0
   carousel_slider: ^5.1.2
+  introduction_screen: ^4.0.0
 
 dev_dependencies:
   flutter_test:
@@ -67,6 +68,7 @@ flutter:
      - assets/images/
      - assets/suras/
      - assets/hadeeth/
+     - assets/sebha/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
